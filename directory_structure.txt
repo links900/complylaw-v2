@@ -1,0 +1,137 @@
+complylaw/
++-- .env
++-- billing
+|   +-- __init__.py
+|   +-- admin.py
+|   +-- apps.py
+|   +-- models.py
+|   +-- tests.py
+|   +-- urls.py
+|   `-- views.py
++-- channels
++-- core
+|   +-- __init__.py
+|   +-- asgi.py
+|   +-- celery.py
+|   +-- settings.py
+|   +-- urls.py
+|   `-- wsgi.py
++-- dashboard
+|   +-- __init__.py
+|   +-- admin.py
+|   +-- apps.py
+|   +-- models.py
+|   +-- tests.py
+|   +-- urls.py
+|   `-- views.py
++-- db.sqlite3
++-- directory_structure.txt
++-- manage.py
++-- media
+|   `-- reports
+|       `-- pdfs
++-- reports
+|   +-- __init__.py
+|   +-- admin.py
+|   +-- apps.py
+|   +-- models - Original.py
+|   +-- models.py
+|   +-- tests.py
+|   +-- urls.py
+|   `-- views.py
++-- requirements.txt
++-- scanlog.txt
++-- scanner
+|   +-- __init__.py
+|   +-- admin.py
+|   +-- apps.py
+|   +-- consumers.py
+|   +-- models.py
+|   +-- tasks - Copy.py
+|   +-- tasks - Old.py
+|   +-- tasks - Recent.py
+|   +-- tasks.py
+|   +-- templatetags
+|   |   +-- __init__.py
+|   |   +-- groupby_filters.py
+|   |   `-- scan_filters.py
+|   +-- tests.py
+|   +-- urls.py
+|   +-- views- new.py
+|   `-- views.py
++-- show
++-- static
+|   +-- css
+|   |   `-- custom.css
+|   +-- img
+|   |   +-- android-chrome-192x192.png
+|   |   +-- android-chrome-512x512.png
+|   |   +-- apple-touch-icon.png
+|   |   +-- favicon-16x16.png
+|   |   +-- favicon-32x32.png
+|   |   +-- favicon.ico
+|   |   +-- favicon_io.zip
+|   |   +-- logo.png
+|   |   `-- site.webmanifest
+|   +-- imgpip
+|   `-- js
++-- templates
+|   +-- 429.html
+|   +-- account
+|   |   +-- base_account.html
+|   |   +-- confirm-email.html
+|   |   +-- email_confirm.html
+|   |   +-- email_confirmation_sent.html
+|   |   +-- email_confirmation_success.html
+|   |   +-- login.html
+|   |   +-- password_change.html
+|   |   +-- password_reset.html
+|   |   +-- password_reset_complete.html
+|   |   +-- password_reset_confirm.html
+|   |   +-- password_reset_done.html
+|   |   +-- password_reset_from_key.html
+|   |   +-- password_reset_from_key_done.html
+|   |   `-- signup.html
+|   +-- base.html
+|   +-- billing
+|   |   +-- pricing.html
+|   |   `-- success.html
+|   +-- dashboard
+|   |   +-- home.html
+|   |   `-- public_home.html
+|   +-- reports
+|   |   +-- pdf_template.html
+|   |   +-- pdf_template_enterprise.html
+|   |   +-- pdf_template_free.html
+|   |   +-- report_detail.html
+|   |   `-- report_list.html
+|   +-- scanner
+|   |   +-- dashboard.html
+|   |   +-- partials
+|   |   |   +-- no_firm.html
+|   |   |   +-- run_scan_modal.html
+|   |   |   +-- scan_complete.html
+|   |   |   +-- scan_list_new.html
+|   |   |   +-- scan_list_table.html
+|   |   |   +-- scan_modal.html
+|   |   |   +-- scan_progress.html
+|   |   |   `-- stat_card.html
+|   |   +-- scan_list.html
+|   |   +-- scan_progress_notused.html
+|   |   +-- scan_result.html
+|   |   `-- scan_status.html
+|   `-- users
+|       +-- firm_settings.html
+|       +-- firm_wizard.html
+|       +-- profile.html
+|       `-- profile_edit.html
+`-- users
+    +-- __init__.py
+    +-- admin.py
+    +-- apps.py
+    +-- backends.py
+    +-- forms.py
+    +-- models.py
+    +-- tests.py
+    +-- urls.py
+    `-- views.py

@@ -1,0 +1,57 @@
+# Python & Virtual Environment
+env/
+venv/
+.venv/
+ENV/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Django specific
+*.log
+scanlog.txt
+db.sqlite3
+db.sqlite3-journal
+local_settings.py
+*.sqlite3
+
+# Media & uploaded files
+media/
+!media/.gitkeep    # (optional: create an empty .gitkeep if you want to keep the folder structure)
+
+# Environment variables
+.env
+.env.local
+.env.* 
+
+# IDEs & Editors
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Node / frontend (if you ever add it)
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+
+# Backup / duplicate files (you have many of these)
+* - Copy.py
+* - Old.py
+* - Recent.py
+*- new.py
+*.bak
