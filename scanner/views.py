@@ -24,6 +24,12 @@ from .tasks import run_compliance_scan
 from reports.models import ComplianceReport
 
 
+
+def keep_alive(request):
+    return HttpResponse("OK")  # Call this every 10min via cron or external ping
+    
+    
+
 # === DASHBOARD ===
 class ScanDashboardView(LoginRequiredMixin, ListView):
     model = ScanResult
