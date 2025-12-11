@@ -33,7 +33,6 @@ urlpatterns = [
     #path('billing/', include('billing.urls', namespace='billing')),
     
     
-    
     # YOUR PROFILE PAGE — THIS WAS MISSING!
     path('profile/', include('users.urls')),
 
@@ -48,8 +47,6 @@ urlpatterns = [
     #path('users/', include('users.urls')),
     path('scanner/', include('scanner.urls')),
     path('reports/', include('reports.urls')),
-    
-    
     
     #path('users/', include('users.urls')),
     
