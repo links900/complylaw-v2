@@ -1,0 +1,10 @@
+Hello from ComplyLaw!
+
+Please confirm your email address by clicking the link below:
+
+{{ activate_url }}
+
+If you did not sign up for ComplyLaw, you can safely ignore this email.
+
+Thanks,
+The ComplyLaw Team
