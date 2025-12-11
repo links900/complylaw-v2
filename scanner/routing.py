@@ -24,4 +24,3 @@ websocket_urlpatterns = [
     # Live notifications (toast messages like "apple.com scan completed!")
     re_path(r'ws/notifications/$', consumers.NotificationConsumer.as_asgi())
 ]
-'
