@@ -48,7 +48,7 @@ urlpatterns = [
     path('scanner/', include('scanner.urls')),
     path('reports/', include('reports.urls')),
     
-    path('ws/', include('dashboard.routing')),
+    path('ws/', include('scanner.routing')),
     
     
     
