@@ -1,5 +1,7 @@
-complylaw/
-+-- .env
+complylaw-v2/
++-- .gitignore
++-- Dockerfile
++-- Procfile
 +-- billing
 |   +-- __init__.py
 |   +-- admin.py
@@ -24,12 +26,55 @@ complylaw/
 |   +-- tests.py
 |   +-- urls.py
 |   `-- views.py
-+-- db.sqlite3
++-- debug.log
 +-- directory_structure.txt
 +-- manage.py
 +-- media
 |   `-- reports
 |       `-- pdfs
+|           +-- report_10_apple.com.pdf
+|           +-- report_10_apple_E1tTkRJ.com.pdf
+|           +-- report_10_apple_Pn4EHDh.com.pdf
+|           +-- report_11_abc.com.pdf
+|           +-- report_11_abc_t1zBZnJ.com.pdf
+|           +-- report_12_abc.com.pdf
+|           +-- report_12_abc_f7fEi4I.com.pdf
+|           +-- report_13_abc.com.pdf
+|           +-- report_13_abc_W1l9YiR.com.pdf
+|           +-- report_14_abc.com.pdf
+|           +-- report_14_abc_Qkhf98d.com.pdf
+|           +-- report_15_abc.com.pdf
+|           +-- report_15_abc_FHXZip7.com.pdf
+|           +-- report_16_abc.com.pdf
+|           +-- report_16_abc_kdzlyJD.com.pdf
+|           +-- report_17_abc.com.pdf
+|           +-- report_17_abc_GuYvThb.com.pdf
+|           +-- report_18_google.com.pdf
+|           +-- report_18_google_hstb6nl.com.pdf
+|           +-- report_19_google.com.pdf
+|           +-- report_19_google_0SpHuph.com.pdf
+|           +-- report_1_abc.com.pdf
+|           +-- report_1_abc_mGvUR9B.com.pdf
+|           +-- report_2_apple.com.pdf
+|           +-- report_2_apple_5k9aaSf.com.pdf
+|           +-- report_3_apple.com.pdf
+|           +-- report_3_apple_wXn6yht.com.pdf
+|           +-- report_4_apple.com.pdf
+|           +-- report_4_apple_WvDn96P.com.pdf
+|           +-- report_5_apple.com.pdf
+|           +-- report_5_apple_kHKYHAd.com.pdf
+|           +-- report_6_apple.com.pdf
+|           +-- report_6_apple_oLVJurt.com.pdf
+|           +-- report_7_apple.com.pdf
+|           +-- report_7_apple_eFYeOdN.com.pdf
+|           +-- report_8_apple.com.pdf
+|           +-- report_8_apple_GExKq2h.com.pdf
+|           +-- report_9_apple.com.pdf
+|           `-- report_9_apple_Au99z8a.com.pdf
++-- railway.json
++-- railway.worker.json
++-- render-build.sh
++-- render.yaml
 +-- reports
 |   +-- __init__.py
 |   +-- admin.py
@@ -40,16 +85,32 @@ complylaw/
 |   +-- urls.py
 |   `-- views.py
 +-- requirements.txt
-+-- scanlog.txt
++-- runtime.txt
 +-- scanner
 |   +-- __init__.py
 |   +-- admin.py
 |   +-- apps.py
 |   +-- consumers.py
 |   +-- models.py
+|   +-- routing.py
+|   +-- scanner_tasks
+|   |   +-- __init__.py
+|   |   +-- cis.py
+|   |   +-- encryption.py
+|   |   +-- gdpr.py
+|   |   +-- helpers - Copy (10).py
+|   |   +-- helpers - Copy (11).py
+|   |   +-- helpers - Copy (12).py
+|   |   +-- helpers - Copy (13).py
+|   |   +-- helpers.py
+|   |   +-- hipaa.py
+|   |   +-- iso27001.py
+|   |   +-- nist.py
+|   |   +-- owasp.py
+|   |   +-- pcidss.py
+|   |   `-- soc2.py
+|   +-- tasks - Combined Original.py
 |   +-- tasks - Copy.py
-|   +-- tasks - Old.py
-|   +-- tasks - Recent.py
 |   +-- tasks.py
 |   +-- templatetags
 |   |   +-- __init__.py
@@ -67,6 +128,7 @@ complylaw/
 |   |   +-- android-chrome-192x192.png
 |   |   +-- android-chrome-512x512.png
 |   |   +-- apple-touch-icon.png
+|   |   +-- favicon - Copy.ico
 |   |   +-- favicon-16x16.png
 |   |   +-- favicon-32x32.png
 |   |   +-- favicon.ico
@@ -74,13 +136,15 @@ complylaw/
 |   |   +-- logo.png
 |   |   `-- site.webmanifest
 |   +-- imgpip
-|   `-- js
+|   +-- js
+|   `-- site.webmanifest
 +-- templates
 |   +-- 429.html
 |   +-- account
 |   |   +-- base_account.html
 |   |   +-- confirm-email.html
 |   |   +-- email_confirm.html
+|   |   +-- email_confirmation_message.txt
 |   |   +-- email_confirmation_sent.html
 |   |   +-- email_confirmation_success.html
 |   |   +-- login.html
