@@ -73,7 +73,7 @@ class RunScanModalView(LoginRequiredMixin, TemplateView):
 
 
 # === START SCAN (WITH RATE LIMIT) ===
-@method_decorator(ratelimit(key='user', rate='30/h', method='POST', block=True), name='dispatch')
+@method_decorator(ratelimit(key='user', rate='2/h', method='POST', block=True), name='dispatch')
 class StartScanView(LoginRequiredMixin, View):
     
     def post(self, request):
