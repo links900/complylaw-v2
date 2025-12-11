@@ -33,6 +33,7 @@ urlpatterns = [
     #path('billing/', include('billing.urls', namespace='billing')),
     
     
+    
     # YOUR PROFILE PAGE — THIS WAS MISSING!
     path('profile/', include('users.urls')),
 
