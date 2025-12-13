@@ -90,7 +90,19 @@ LOGIN_REDIRECT_URL = '/dashboard/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 ACCOUNT_LOGOUT_ON_GET = True
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # dev only
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # dev only
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')  # Bluehost: mail.yourdomain.com
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'  # True for port 587
+EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', 'False') == 'True'  # True for port 465
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # your full Bluehost email
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # your Bluehost email password
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
+
+# Optional: fallback to console in development
+if not os.getenv('RENDER'):  # or DEBUG = True
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # ========================= STRIPE (example placeholders) =========================
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', 'sk_test_...')
