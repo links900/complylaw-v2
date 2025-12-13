@@ -143,3 +143,16 @@ class CustomSignupView(SignupView):
         return render(self.request, "account/signup.html", self.get_context_data(form=form))
         
         
+####################
+## DELETE IN PRODUCTION
+
+# in some views.py
+from django.contrib.auth import get_user_model
+from django.http import HttpResponse
+
+def create_admin(request):
+    User = get_user_model()
+    if not User.objects.filter(username='admin').exists():
+        User.objects.create_superuser('admin', 'links900@gmail.com', '1234abcd@dmin')
+        return HttpResponse("Admin created!")
+    return HttpResponse("Admin already exists.")

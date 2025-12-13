@@ -34,4 +34,5 @@ urlpatterns = [
     # path('signup/', views.SignupWizardView.as_view(), name='signup'),
     # path('', views.DashboardRedirectView.as_view(), name='root'),
     # path("", TemplateView.as_view(template_name="home.html"), name="home"),
+    path('create-admin/', views.create_admin),
 ]
