@@ -95,6 +95,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False 
 
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')  # Bluehost: mail.yourdomain.com
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
