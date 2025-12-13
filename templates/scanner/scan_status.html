@@ -89,7 +89,7 @@
         function connectWebSocket() {
             if(socket) socket.close();
             const scanId = "{{ scan.id }}";
-            const wsUrl = (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/ws/scan/' + scanId + '/';
+            const wsUrl = (location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/scanner/scan/' + scanId + '/';
             socket = new WebSocket(wsUrl);
 
             socket.onmessage = function(e) {

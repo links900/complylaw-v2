@@ -1,8 +1,13 @@
 Hello from ComplyLaw!
 
-HYou're receiving this email because user {{ user_email }} has registered on {{ site.name }}.
+You're receiving this email because user {{ user_email }} has registered on {{ site.name }}.
 
-To confirm your account, click here: {{ activate_url }}
+To confirm your account, click here: 
+
+
+{{ activate_url }}
+
+
 
 Thank you for using {{ site.name }}!
 
