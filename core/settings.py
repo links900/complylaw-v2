@@ -296,7 +296,7 @@ SITE_DOMAIN = os.getenv("SITE_DOMAIN", "localhost:8000")  # fallback for local
 SITE_NAME = os.getenv("SITE_NAME", "ComplyLaw")          # fallback for local
 
 # Update Site object automatically
-from django.contrib.sites.models import Site
+
 
 if not os.getenv('RENDER') or DEBUG:
     # local/dev, override via .env
