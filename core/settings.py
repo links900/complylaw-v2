@@ -94,7 +94,7 @@ ACCOUNT_LOGOUT_ON_GET = True
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 
-SENDGRID_API_KEY = os.environ.get("SENDGRID_API_KEY")
+SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'localhost')  # Bluehost: mail.yourdomain.com
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
