@@ -99,6 +99,7 @@ EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', 'False') == 'True'  # True for port 4
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')  # your full Bluehost email
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # your Bluehost email password
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', EMAIL_HOST_USER)
+EMAIL_TIMEOUT = 10
 
 # Optional: fallback to console in development
 if not os.getenv('RENDER'):  # or DEBUG = True
