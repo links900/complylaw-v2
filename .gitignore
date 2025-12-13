@@ -1,8 +1,4 @@
-# Python & Virtual Environment
-env/
-venv/
-.venv/
-ENV/
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
@@ -14,17 +10,30 @@ htmlcov/
 dist/
 build/
 
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+
 # Django specific
 *.log
 scanlog.txt
 db.sqlite3
+media/
 db.sqlite3-journal
 local_settings.py
 *.sqlite3
 
-# Media & uploaded files
-media/
-!media/.gitkeep    # (optional: create an empty .gitkeep if you want to keep the folder structure)
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
 
 # Environment variables
 .env
@@ -55,3 +64,6 @@ yarn-error.log*
 * - Recent.py
 *- new.py
 *.bak
+
+
+
