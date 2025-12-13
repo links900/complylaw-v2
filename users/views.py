@@ -146,13 +146,22 @@ class CustomSignupView(SignupView):
 ####################
 ## DELETE IN PRODUCTION
 
-# in some views.py
 from django.contrib.auth import get_user_model
 from django.http import HttpResponse
+from django.conf import settings
 
-def create_admin(request):
+def create_admin_user(request):
+    # Only allow this on DEBUG or from a secret key (optional)
+    if not settings.DEBUG:
+        return HttpResponse("Not allowed.", status=403)
+
     User = get_user_model()
-    if not User.objects.filter(username='admin').exists():
-        User.objects.create_superuser('admin', 'links900@gmail.com', '1234abcd@dmin')
-        return HttpResponse("Admin created!")
-    return HttpResponse("Admin already exists.")
+    username = "admin"
+    email = "complylaw@alhambra-solutions.com"
+    password = "1234abcd@dmin"  # CHANGE this to a strong password
+
+    if User.objects.filter(username=username).exists():
+        return HttpResponse("Admin user already exists.")
+
+    User.objects.create_superuser(username=username, email=email, password=password)
+    return HttpResponse(f"Superuser '{username}' created successfully!")

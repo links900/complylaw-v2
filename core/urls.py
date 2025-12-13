@@ -8,6 +8,7 @@ from users.views import CustomSignupView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('users/', include('users.urls')),
 
     # Allauth signup/login
     path('accounts/signup/', CustomSignupView.as_view(), name='account_signup'),
