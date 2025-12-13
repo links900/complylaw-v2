@@ -292,21 +292,8 @@ LOGGING = {
 
 
 # ========================= DYNAMIC SITE INFO =========================
-SITE_DOMAIN = os.getenv("SITE_DOMAIN", "localhost:8000")  # fallback for local
-SITE_NAME = os.getenv("SITE_NAME", "ComplyLaw")          # fallback for local
-
-# Update Site object automatically
-
-
-if not os.getenv('RENDER') or DEBUG:
-    # local/dev, override via .env
-    Site.objects.update_or_create(
-        id=SITE_ID,
-        defaults={"domain": SITE_DOMAIN, "name": SITE_NAME}
-    )
-else:
-    # Render production, you can set SITE_DOMAIN / SITE_NAME in Render env vars
-    Site.objects.update_or_create(
-        id=SITE_ID,
-        defaults={"domain": SITE_DOMAIN, "name": SITE_NAME}
-    )
+SITE_NAME = os.getenv("SITE_NAME", "ComplyLaw")
+SITE_DOMAIN = os.getenv(
+    "SITE_DOMAIN",
+    "complylaw-v1.onrender.com" if os.getenv("RENDER") else "localhost:8000"
+)

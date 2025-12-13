@@ -8,7 +8,7 @@ def update_site(sender, **kwargs):
     Site.objects.update_or_create(
         id=settings.SITE_ID,
         defaults={
-            "domain": getattr(settings, "SITE_DOMAIN", "localhost:8000"),
-            "name": getattr(settings, "SITE_NAME", "ComplyLaw")
-        }
+            "domain": settings.SITE_DOMAIN,
+            "name": settings.SITE_NAME,
+        },
     )
