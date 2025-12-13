@@ -1,10 +1,10 @@
 Hello from ComplyLaw!
 
-Please confirm your email address by clicking the link below:
+HYou're receiving this email because user {{ user_email }} has registered on {{ site.name }}.
 
-{{ activate_url }}
+To confirm your account, click here: {{ activate_url }}
 
-If you did not sign up for ComplyLaw, you can safely ignore this email.
+Thank you for using {{ site.name }}!
 
 Thanks,
 The ComplyLaw Team
