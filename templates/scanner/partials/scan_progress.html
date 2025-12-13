@@ -49,7 +49,9 @@
                         {{ scan.status }}
                     </span>
                 </p>
-                {% if scan.status in ['RUNNING','PENDING'] %}
+                {% if scan.status == "RUNNING" or scan.status == "PENDING" or  scan.status in active_statuses %}
+
+
                     <button onclick="location.reload();" class="inline-flex items-center px-3 py-2 text-sm border rounded-md bg-white hover:bg-slate-50">
                         Refresh
                     </button>

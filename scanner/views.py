@@ -129,7 +129,10 @@ class ScanStatusView(LoginRequiredMixin, DetailView):
         return ScanResult.objects.filter(firm=self.request.user.firm)
         
     
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["active_statuses"] = ("RUNNING", "PENDING")
+        return context
 
 # === HTMX PARTIAL: Progress Update ===
 def scan_status_partial(request, pk):
